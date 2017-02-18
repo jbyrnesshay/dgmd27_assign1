@@ -112,14 +112,14 @@ nav ul li a {
 	text-decoration: none;
 	 /*box-shadow: 10px 10px 5px #888888;*/
 	 font-family:arial;
+	 
 }
 nav ul li a:hover  {
 	background:grey;
 	color:white;
-	padding: .3em;
-	font-weight:bold;
-	font-size: .9em;
-	border:2px solid white;
+	 
+	 
+	 
 
 }
 nav {
@@ -202,7 +202,7 @@ footer {
 	nav ul li a {
 		box-shadow:initial;
 		border-radius: initial;
-		border:1px solid black;
+		 
 }
 	nav ul {
 		text-align:center;
@@ -219,7 +219,9 @@ footer {
 	}
 
 	}
-
+li a {
+	 
+}
 
 
 @media (min-width:480px) and (max-width: 599px) {
@@ -247,13 +249,13 @@ footer {
 		float:right;
 		width:100%;
 		margin:0;
-		border:1px solid black;
+		
 	}
 	li a:nth-of-type(even) {
 	    float:left;
 		width:100%;
 		margin:0;
-		border:1px solid black;
+		 
 	}
 }
 
@@ -309,14 +311,29 @@ footer {
  	 position:relative;
  }
 /*droplist display/hide*/
+
+
 @media (max-width: 479px) {
- 
+ 	.fixbuttonheight{
+ 		height:3em;
+ 		padding:0em;
+ 	}
+
 	.clickme {
+		position:absolute;
+		right:0;
+		 
+		
+		 
 		display:block;
 		width:3em;
 		margin-right:1em;
 		background:inherit;
 		padding:.4em;
+
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
 		 
 	}
 	.clickme:hover {
@@ -324,13 +341,15 @@ footer {
 		background:grey;
 	}
 	.clickme:focus {
-	   outline:0;
+	   outline:1px solid black;
+
 	}
 	/*gets rid of blue border on focus in chrome
 	http://stackoverflow.com/questions/20340138/remove-blue-border-from-css-custom-styled-button-in-chrome
 	*/
 	 li {
 		width:7em;
+
 	}
 	nav {
 		padding-right:0;
@@ -338,10 +357,7 @@ footer {
 	.clickme {
     
      
-     
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
+  
 }
 .hamburger{
 	border-top:3px solid black;
@@ -382,21 +398,41 @@ button.clickme div {
 	position:relative;
 	display:block;
 	float:right;
-
+ 
 }
+
+.dropcontent{
+	 
+ 		transition: height 5s ease;
+ 	}
+
 	.dropcontent {
 	position:absolute;
 	/*absolute for overlay, relative to push down */
- 	display:none;
+ 	display:block;
+ 	 
 	margin-top:.5em;
     right:.04em;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    
+    transform: scaleY(0); 
+    /*transform:translateX(20em); */
+    /*transform-origin: top;*/
+    transition: transform .3s, opacity 2s;
+     opacity:.3;
+    /*http://stackoverflow.com/questions/3508605/how-can-i-transition-height-0-to-height-auto-using-css*/
+	 
+     
 
 
 }
-
+#fa {
+	position:relative;
+	 max-height:0em;
+	
+	display:inline-block;
+	width:100%;
+}
 .dropcontent a {
 	display:block;
 	color: black;
@@ -408,16 +444,16 @@ nav ul li a:hover  {
 	background:grey;
 	color:white;
 	 
-	 font-weight:normal;
-	 font-size:1.3em;
-	border:2px solid white;
-
+	 
+	  
+	 
+	
 }
  
  nav ul li {
  	padding: 0em;
  	margin: 0;
- 	border:1px solid black;
+ 	 
  }
  nav ul li a {
  	padding:0;
@@ -426,8 +462,11 @@ nav ul li a:hover  {
 }
 
 .show {
-	display:block;
-	 
+	/*display:block;*/
+	 transform: translateX(0);
+	 transform: scaleY(1);
+	 opacity: 1;
+	 /*transform: translateX(0);*/
 	color:green;
 	 
  
