@@ -34,20 +34,40 @@ function waytoGo(badthings) {
 	var text = badthings || 'hello there is my default';
 	alert(text);
 }
-
 function dropper() {
-	 var name = 'dropcontent';
-	 
+
 	var tots = document.getElementsByClassName(name);
-			   
- 
-	for (i=0; i< tots.length; i++) {
-		tots[i].classList.toggle('show');
+	var name = 'dropcontent';
+	 var tots = document.getElementsByClassName(name);
+	 
+ 	 	
+ 	 document.onclick = function(e){
+
+ 	  
+ 	  	whereClicked = e.target;
+ 	  	//alert(whereClicked);		is it link										is it button
+ 	 	if (!(document.getElementById("dropking").contains(whereClicked))){
+ 	 		 
+
+ 	 	 	if(tots[0].classList.contains('show')) 
+ 	 		{ 
+ 	 			tots[0].classList.remove('show');
+ 	 		 
+ 	 		}}
+ 	 		
+		else if (!(document.getElementById("fa").contains(whereClicked))){
+			 
+		tots[0].classList.toggle('show');	}
+			 }
 		 
 	}
- 
+ 	 	
+ 	 
+ 	 
+ 	 	 
 
-	 }
+
+
 	
 			
 

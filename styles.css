@@ -234,6 +234,7 @@ li a {
 	}
 	nav ul li a{
 		margin:0;
+		border: 1px solid black;
 	}
 	li:nth-of-type(odd){
 		float:left;
@@ -409,7 +410,7 @@ button.clickme div {
 	.dropcontent {
 	position:absolute;
 	/*absolute for overlay, relative to push down */
- 	display:block;
+ 	 
  	 
 	margin-top:.5em;
     right:.04em;
@@ -418,8 +419,8 @@ button.clickme div {
     transform: scaleY(0); 
     /*transform:translateX(20em); */
     /*transform-origin: top;*/
-    transition: transform .3s, opacity 2s;
-     opacity:.3;
+    transition: transform .3s;
+     
     /*http://stackoverflow.com/questions/3508605/how-can-i-transition-height-0-to-height-auto-using-css*/
 	 
      
@@ -457,6 +458,7 @@ nav ul li a:hover  {
  }
  nav ul li a {
  	padding:0;
+ 	border:1px solid black;
  }
 
 }
@@ -465,9 +467,10 @@ nav ul li a:hover  {
 	/*display:block;*/
 	 transform: translateX(0);
 	 transform: scaleY(1);
-	 opacity: 1;
+
+ 
 	 /*transform: translateX(0);*/
-	color:green;
+	 
 	 
  
 	 
