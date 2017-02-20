@@ -17,7 +17,9 @@ body {
 	background-color: snow;
 	/*red
 	--mainColor:purple;*/
+
 }
+ 
 div {
 	 
 }
@@ -58,10 +60,11 @@ header:before {
     opacity : 0.5;
     z-index: -1;
 }
-.row::after, .nav::after {
+.row::after, .nav::after, div[data-key="clearHeights"]::after {
 	content:"";
 	display: table;
 	clear: both;
+	
 }
 
 h1 {
@@ -149,6 +152,11 @@ nav {
 	margin-left:4%;
 	position:relative;
 	min-height:1px;
+
+}
+h3 {
+	position:relative;
+	left:.5em;
 }
 
 .col2, .col-2-3 {
@@ -157,7 +165,11 @@ nav {
 	 
 	 background:pink;
 }
-.col-4,.col-4-3, .col-rm-4-3 {
+.external p {
+	 
+	padding: 1em;
+}
+.col-4,.col-4-3, .col-rm-4-3, .col-rm-4-3-4 {
 	 
 	width:60%;
 	 
@@ -175,23 +187,43 @@ nav {
 
 }
 /*div[class="col-6"]:first-of-type img */
-div img {
+div picture {
 	float:left;
 	padding-right: .7em;
 	padding-bottom: .4em;
+
 
 }
 .jan {
 	display:inline-block;
 	word-wrap:normal;
 }
-iframe {
-	top: 0;
-	bottom:0;
 
-	height: 75em;
-	zoom:0.25;
+.external h2 {
+	position:relative;
+	text-align:center;
+	width:100%;
+	margin:0 auto;
+	padding:1em;
+ 
+	 
 }
+.external header {
+	text-align:center;
+}
+ 
+.external .col-2-3 {
+	height:25em;
+}
+iframe {
+	 
+	 
+	height:25em;
+	
+	 
+	 
+}
+
 footer {
  
 
@@ -399,6 +431,7 @@ h1 {
     transition: transform ease .3s;
     visibility:hidden;
     
+    
 
      
     /*http://stackoverflow.com/questions/3508605/how-can-i-transition-height-0-to-height-auto-using-css*/
@@ -434,7 +467,7 @@ h1 {
 	}
 	.clickme:hover {
 		border:1px solid black;
-		background:grey;
+		background:aqua;
 	}
 	.clickme:focus {
 	   outline:1px solid black;
@@ -570,4 +603,5 @@ nav ul li a:focus {
 	 
 	 
 
-}
+} 
+ 
