@@ -1,0 +1,387 @@
+@media (min-width: 480px) and (max-width: 767px) {
+	.col-1-2,
+	.col-2, .col-4-3, .col-2-3, .col-rm-4-3-4 {
+		 width:44%;
+	}
+	.col-rm-4-3-4 {
+		 
+	}
+	h2 {
+		display:none;
+	}
+	ul {
+		display:block;
+	}
+	.col-1-4,
+	.col-3,
+	.col-4 {
+		 
+	}
+	nav ul li a {
+		box-shadow:initial;
+		border-radius: initial;
+		 
+}
+	nav ul {
+		text-align:center;
+		display:block;
+		
+		 
+	}
+	nav ul li {
+		margin-left:6%;
+
+		 
+	}
+	nav {
+		padding:.35em;
+	}
+
+	}
+li a {
+	 
+}
+
+
+@media (min-width:480px) and (max-width: 599px) {
+	.col-rm-4-3-4 {
+		width: 92%;
+	}
+	.col-2-3  {
+		width:44%;
+	}
+	.external .col-2-3 {
+		width:92%;
+		height: 5em;
+		background:blue;
+		 
+	}
+	
+	ul {
+		background:blue;
+		border: initial;
+		padding: 0;
+		display:inline-block;
+
+	}
+	ul:after{
+		content:"";
+		display:table;
+		clear:both;
+	}
+	li {
+		display:inline-block;
+		margin:0;
+	}
+	nav ul li a{
+		margin:0;
+		border: 1px solid black;
+	}
+	li:nth-of-type(odd){
+		float:left;
+		width:50%;
+		margin:0;
+	}
+	li:nth-of-type(even){
+		float:right;
+		width:50%;
+		margin:0;
+	}
+	li a:nth-of-type(odd) {
+		float:right;
+		width:100%;
+		margin:0;
+		
+	}
+	li a:nth-of-type(even) {
+	    float:left;
+		width:100%;
+		margin:0;
+		 
+	}
+	header {
+		color:white; 
+		 
+		margin-right: 30em;
+	}
+	header:before {
+	content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  	background: url(resized/DSC08302.jpg) no-repeat;
+	 
+    width: 100%;
+    height: 100%;
+    opacity : 1;
+    z-index: -1;
+    background-size:cover;
+}
+h1 {
+	margin-top: 1.4em;
+	margin-bottom:1.4em;
+
+}
+}
+
+@media (max-width: 479px) {
+	[class*="col-"] {
+		width:92%;
+		 
+		border-bottom:1px solid black;
+		  
+		
+	}
+.external .col-2-3 {
+		width:92%;
+		height: 5em;
+		background:blue;
+		 
+	}
+ 
+	nav ul {
+		width: 44%;
+		float:left;
+
+
+	}
+
+	nav ul li {
+		/*display:block;*/
+		margin-left:0;
+		margin-bottom:.75em;
+		background:purple;
+		 
+	}
+	nav ul li a {
+		border-radius:0px;
+	}
+	/*
+	nav ul li a:before {
+		content:"ha";
+	}
+	 
+	 */
+
+
+}
+
+@media (max-width: 479px) {
+
+	 
+ 	ul {
+ 		padding:0;
+ 	}
+ 
+	.dropcontent {
+	position:absolute;
+
+	/*absolute for overlay, relative to push down */
+ 	 
+ 	 
+	margin-top:.5em;
+    right:.04em;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    transform: scaleY(0); 
+    /*transform:translateX(20em);*/ 
+    transform-origin: top;
+    transition: transform ease .3s;
+    visibility:hidden;
+    
+    
+
+     
+    /*http://stackoverflow.com/questions/3508605/how-can-i-transition-height-0-to-height-auto-using-css*/
+	}
+	.manageHeight{
+	 position: relative;
+	 
+	overflow-y: hidden; 
+	/*-webkit-overflow-scrolling: touch;*/
+	 border: 2px solid black;
+	 padding: 1em;
+	 background: brown;
+	  
+	 }
+	 .external.col-2-3 {
+	 	background: aqua;
+	 	border: 1px solid black;
+	 	display:inline-block;
+	 	overflow-y:hidden;
+
+	 }
+
+	object {
+		height:  10000px;
+		 position: absolute;
+		 width: auto;
+		 
+	}
+ 	.fixbuttonheight{
+ 		height:3em;
+ 		padding:0em;
+ 	}
+
+ 	 
+ 	
+
+	.clickme {
+		position:absolute;
+		right:0;
+		 
+		
+		 
+		display:block;
+		width:3em;
+		margin-right:1em;
+		background:inherit;
+		padding:.4em;
+
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+		 
+	}
+	.clickme:hover {
+		border:1px solid black;
+		background:aqua;
+	}
+	.clickme:focus {
+	   outline:1px solid black;
+
+
+	}
+	/*gets rid of blue border on focus in chrome
+	http://stackoverflow.com/questions/20340138/remove-blue-border-from-css-custom-styled-button-in-chrome
+	*/
+	 li {
+		width:7em;
+
+	}
+	nav {
+		padding-right:0;
+	}
+	.clickme {
+    
+     
+  
+}
+.hamburger{
+	border-top:3px solid black;
+	border-bottom:3px solid black;
+	position:relative;
+	height:2em;
+	display:block;
+	width:2em;
+
+}
+/*hamburger:before method technique for middle hamburger line from 
+https://superdevresources.com/css-hamburger-menu/ */
+
+/*alternate div method from https://www.w3schools.com/howto/howto_css_menu_icon.asp */
+.hamburger:before {
+	content:"";
+	position:absolute;
+	width:100%;
+	left:0;
+	top: 45%;
+	border-top:3px solid black;
+}
+/*#clickme:not(:focus) {
+	/*transition: transform 1s;*/
+	/*transform: rotate(0deg);
+	}*/
+	#clickme.rotate {
+		transform: rotate(90deg);
+	}
+ 	/*#clickme:focus.derotate {
+ 		transform: rotate(90deg);
+ 	}*/
+ 
+	 
+ 
+button.clickme div {
+	background:black;
+	position:relative;
+	display:block;
+	height:5px;
+	width:65%;
+	margin:.4em;
+}
+
+
+
+/* Dropdown button on hover & focus */
+.clickme:hover, .clickme:focus {
+    /*background-color: white;*/
+}
+.clickme:focus {
+	border:none;
+
+}
+	.dropdown {
+	position:relative;
+	display:block;
+	float:right;
+ 
+}
+
+
+#fa {
+	position:relative;
+	  
+	
+	display:inline-block;
+	width:100%;
+}
+.dropcontent a {
+	display:block;
+	color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+
+}
+
+nav ul li a:hover  {
+	background:grey;
+	color:white;
+	 
+	 
+	  
+	 
+	
+}
+nav ul li a:focus {
+	background:aqua;
+}
+ 
+ nav ul li {
+ 	padding: 0em;
+ 	margin: 0;
+ 	 
+ }
+ nav ul li a {
+ 	padding:0;
+ 	border:1px solid black;
+ }
+ 
+}
+
+
+
+.show {
+	visibility:visible;
+	 /*transform: translateX(0);*/
+	 transform: scaleY(1);
+	 
+ 
+	 /*transform: translateX(0);*/
+	 
+	 
+ 
+	 
+	 
+
+} 
