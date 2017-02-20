@@ -15,14 +15,14 @@ html {
 body {
 	font-family: "Century Gothic", Geneva, sans-serif;
 	background-color: snow;
-	/*
+	/*red
 	--mainColor:purple;*/
 }
 div {
 	 
 }
 div img {
-	width: 100vw;
+	width: 100%;
 	max-width:225px;
 }
 .wrapper {
@@ -65,16 +65,21 @@ header:before {
 }
 
 h1 {
-	font-size: 4vmin;
+	/*font-size: calc(18px+2vw);*/
+	font-size: 3vmax;
 
 	/*
 	font-size:calc(18px + 0.25vw);
-	font-size: calc(112.5% + 1vw);
-	font-size:calc(150%+5vw);*/
+	font-size: calc(112.5% + 1vw);*/
+	/*font-size:calc(150% + 5vw);*/
 
 }
 ul li a {
+	/*font-size: 2.5vmin;
+	
+	font-size:calc(.75em + .5vw);
 
+font-size:calc(1.4vmin + .4em);*/
 }
 ul li {
 
@@ -145,13 +150,14 @@ nav {
 	position:relative;
 	min-height:1px;
 }
-.col-2-3 {
+
+.col2, .col-2-3 {
 	 
 	 width:28%;
 	 
 	 background:pink;
 }
-.col-4-3 {
+.col-4,.col-4-3, .col-rm-4-3 {
 	 
 	width:60%;
 	 
@@ -168,7 +174,24 @@ nav {
 	 
 
 }
+/*div[class="col-6"]:first-of-type img */
+div img {
+	float:left;
+	padding-right: .7em;
+	padding-bottom: .4em;
 
+}
+.jan {
+	display:inline-block;
+	word-wrap:normal;
+}
+iframe {
+	top: 0;
+	bottom:0;
+
+	height: 75em;
+	zoom:0.25;
+}
 footer {
  
 
@@ -189,8 +212,11 @@ footer {
 
 @media (min-width: 480px) and (max-width: 767px) {
 	.col-1-2,
-	.col-2, .col-4-3, .col-2-3 {
+	.col-2, .col-4-3, .col-2-3, .col-rm-4-3-4 {
 		 width:44%;
+	}
+	.col-rm-4-3-4 {
+		 
 	}
 	h2 {
 		display:none;
@@ -230,6 +256,12 @@ li a {
 
 
 @media (min-width:480px) and (max-width: 599px) {
+	.col-rm-4-3-4 {
+		width: 92%;
+	}
+	.col-2-3 {
+		width:44%;
+	}
 	ul {
 		background:blue;
 		border: initial;
@@ -292,8 +324,8 @@ li a {
     background-size:cover;
 }
 h1 {
-	margin-top: 1.75em;
-	margin-bottom:1.75em;
+	margin-top: 1.4em;
+	margin-bottom:1.4em;
 
 }
 }
@@ -301,7 +333,8 @@ h1 {
 @media (max-width: 479px) {
 	[class*="col-"] {
 		width:92%;
-		background:red;
+		background:snow;
+		border-bottom:1px solid black;
 		  
 		
 	}
@@ -336,18 +369,7 @@ h1 {
 .clickme {
 	display:none;
 }
-  #fa{
-  
-    
-   
-  }
-  #fa li a {
-  	 
-  }
- .move {
-
- 	 
- }
+ 
  .dropcontent {
  	 position:relative;
  }
@@ -356,10 +378,7 @@ h1 {
 
 @media (max-width: 479px) {
 
-	.dropcontent{
 	 
- 		 
- 	}
  	ul {
  		padding:0;
  	}
@@ -375,9 +394,12 @@ h1 {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     transform: scaleY(0); 
-    /*transform:translateX(20em); */
-    /*transform-origin: top;*/
-    transition: transform .3s;
+    /*transform:translateX(20em);*/ 
+    transform-origin: top;
+    transition: transform ease .3s;
+    visibility:hidden;
+    
+
      
     /*http://stackoverflow.com/questions/3508605/how-can-i-transition-height-0-to-height-auto-using-css*/
 	 
@@ -389,6 +411,9 @@ h1 {
  		height:3em;
  		padding:0em;
  	}
+
+ 	 
+ 	
 
 	.clickme {
 		position:absolute;
@@ -413,6 +438,7 @@ h1 {
 	}
 	.clickme:focus {
 	   outline:1px solid black;
+
 
 	}
 	/*gets rid of blue border on focus in chrome
@@ -439,6 +465,10 @@ h1 {
 	width:2em;
 
 }
+/*hamburger:before method technique for middle hamburger line from 
+https://superdevresources.com/css-hamburger-menu/ */
+
+/*alternate div method from https://www.w3schools.com/howto/howto_css_menu_icon.asp */
 .hamburger:before {
 	content:"";
 	position:absolute;
@@ -458,8 +488,7 @@ h1 {
  		transform: rotate(90deg);
  	}*/
  
-	
-
+	 
  
 button.clickme div {
 	background:black;
@@ -478,6 +507,7 @@ button.clickme div {
 }
 .clickme:focus {
 	border:none;
+
 }
 	.dropdown {
 	position:relative;
@@ -528,10 +558,10 @@ nav ul li a:focus {
 }
 
 .show {
-	
-	 transform: translateX(0);
+	visibility:visible;
+	 /*transform: translateX(0);*/
 	 transform: scaleY(1);
-	opacity:1;
+	 
  
 	 /*transform: translateX(0);*/
 	 
