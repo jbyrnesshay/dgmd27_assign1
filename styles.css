@@ -1,31 +1,20 @@
+
+/*guide--- grid system is declared starting line 27; media queries in general start at line 234; 
+first backgrouund image declaration at line 122; remaining responsive background images start at line 238;*/
+/*hamburger button coding starts at line 438 */
+
 /* Border box declaration */
 html {
   box-sizing: border-box;
-	 
-	
-
 }
 /* inherit border-box on all elements in the universe and before and after */
-*, 
-*:before, 
-*:after {
+*, *:before, *:after {
   box-sizing: inherit;
 }
-
 body {
 	font-family: "Century Gothic", Geneva, sans-serif;
-	background-color: snow;
-	/*red
-	--mainColor:purple;*/
-
-}
- 
-div {
-	 
-}
-div img {
-	width: 100%;
-	max-width:225px;
+	background: #fdfdfb;
+	color: black;
 }
 .wrapper {
 	width: 99%;
@@ -33,7 +22,82 @@ div img {
 	margin: 0;
 	float: none;
 	margin: 0 auto;
-	 
+}
+/*6 column grid system is declared in this section*/
+[class^="col-"]{
+	float:left;
+	margin-left:4%;
+	position:relative;
+	min-height:1px;
+}
+.col-2-3 {
+	width:28%;
+}
+.col-4-3, .col-rm-4-3 {
+	width:60%;
+}
+.col-3 {
+	width:44%;
+}
+.col-6 {
+	width:92%;
+}
+/*external class are my 2 extra pages that link to external sites with iframe/object tags*/
+.external .col-2-3 {
+	height:25em;
+	margin-bottom:3em;
+}
+.external .col-3 {
+	margin-bottom: 10em;
+}
+.external .col-6:nth-of-type(2) {
+	position: relative;
+	display:block;
+	margin-top: 5em;
+	bottom:0;
+}
+h1 {
+	position:absolute;
+	font-size: calc(1em + 2.25vmax);
+	padding:0;
+	margin-top:0;
+	font-weight:bolder;
+	color:black;
+}
+h2 {
+	margin:0;
+	padding:0;
+	font-size:1.3em;
+	margin-right:10vw;
+	border-bottom: 1px;
+	position:relative;
+	padding: .25em;
+	padding-top:0;
+	margin-top:0;
+	width:100%;
+	background:floralwhite;
+	color:blue;
+	text-transform:uppercase;
+}
+h3 {
+	padding:.25em;
+	background: floralwhite;
+	color:blue;
+	padding-left:.5em;
+}
+.external h3 {
+	font-size: calc(.6em + .8vmin);
+}
+.external h2 {
+	position:relative;
+	text-align:center;
+	width:100%;
+	margin:0 auto;
+	padding:1em;
+	font-size:1.5em;
+ }
+.external header {
+	text-align:center;
 }
 header {
 	border-bottom: 1px solid black;
@@ -45,55 +109,29 @@ header {
 	text-transform: uppercase;
 	letter-spacing: .4em;
 	text-align:center;
-	/*color:var(--mainColor);*/
+	height: 10em;
 }
+/*first background image declared here */
 header:before {
 	content : "";
-    display: block;
     position: absolute;
     top: 0;
-    left: 0;
-  	background: url(resized/DSC08487.jpg) repeat;
-	
-    width: 100%;
+    left: 0; 	
+	width: 100%;
     height: 100%;
-    opacity : 0.5;
+    background: url(img/background2x_1200.png) no-repeat;
+    opacity : 0.7;
     z-index: -1;
+    display: block;
 }
+/*clearing floats*/
 .row::after, .nav::after, div[data-key="clearHeights"]::after {
 	content:"";
 	display: table;
 	clear: both;
-	
-}
-
-h1 {
-	/*font-size: calc(18px+2vw);*/
-	font-size: 3vmax;
-
-	/*
-	font-size:calc(18px + 0.25vw);
-	font-size: calc(112.5% + 1vw);*/
-	/*font-size:calc(150% + 5vw);*/
-
-}
-ul li a {
-	/*font-size: 2.5vmin;
-	
-	font-size:calc(.75em + .5vw);
-
-font-size:calc(1.4vmin + .4em);*/
-}
-ul li {
-
-}
-li, button {
-
 }
 nav ul li {
- 
-	 
-	display:inline-block;
+ 	display:inline-block;
 	border:2px solid black;
 }
 nav ul li:first-of-type {
@@ -102,37 +140,21 @@ nav ul li:first-of-type {
 nav ul {
 	padding:.15em;
 	list-style-type:none;
-	margin:0;
-	cursor:pointer;	 
+	margin:0; 
 	border:2px solid black;
 	display:inline-block;
 	background:snow;
-	  
-}
-h2 {
-	float:right;
-	margin:0;
-	padding:0;
-	font-size:1em;
-	margin-right:10vw;
 }
 nav ul li a {
 	background:  white;
 	text-transform:uppercase;
 	padding:  .1em;
-	  
 	text-decoration: none;
-	 /*box-shadow: 10px 10px 5px #888888;*/
-	 font-family:arial;
-	 
+	font-family:arial;
 }
 nav ul li a:hover  {
 	background:grey;
 	color:white;
-	 
-	 
-	 
-
 }
 nav {
 	float:left;
@@ -142,123 +164,398 @@ nav {
 	padding: .7em;
 	margin-left:4%;
 	margin-bottom:.25em;
-
-
-
 }
 
-[class^="col-"]{
-	float:left;
-	margin-left:4%;
-	position:relative;
-	min-height:1px;
-
-}
-h3 {
-	position:relative;
-	left:.5em;
+article img {
+	width: 100%;
+	max-width:400px;
+	border-radius: 5px;
 }
 
-.col2, .col-2-3 {
-	 
-	 width:28%;
-	 
-	 background:pink;
-}
 .external p {
-	 
 	padding: 1em;
 }
-.col-4,.col-4-3, .col-rm-4-3, .col-rm-4-3-4 {
-	 
-	width:60%;
-	 
-	background:lightyellow;
-}
-.col-3 {
-	 
-	background:aqua;
-	width:44%;
-}
-.col-6 {
-	width:92%;
-	background:grey;
-	 
 
-}
-/*div[class="col-6"]:first-of-type img */
 div picture {
 	float:left;
 	padding-right: .7em;
 	padding-bottom: .4em;
-
-
+}
+/*change the float scheme for images for exceptional case on sights.html*/
+#sights div picture {
+	float: right;
+	padding: 1em;
+}
+/*styling the descriptive text about what goes in on the iframe pages */
+.iframe p {
+	background:floralwhite;
+	font-family:  Arial, sans-serif;
+	font-size:.9em;
 }
 .jan {
 	display:inline-block;
 	word-wrap:normal;
 }
 
-.external h2 {
-	position:relative;
-	text-align:center;
-	width:100%;
-	margin:0 auto;
-	padding:1em;
- 
-	 
-}
-.external header {
-	text-align:center;
-}
- 
-.external .col-2-3 {
-	height:25em;
-}
 iframe {
-	 
-	 
-	height:25em;
-	
-	 
-	 
+	height:50em;
 }
 
 footer {
- 
-
-}
-footer {
-	width:92%; 
-	margin-left:4%; 
+	width:100%; 
+	 
 	padding: 2em 0;
-	 
 	color: #999;
 	text-align: center;
 	background:gainsboro;
+	 
 }
-
- 
-
- object {
+/*dont include object in base case.  it will be turned on at mobile dimensions, where iframe will instead not be displayed */
+object {
  	display:none;
- }
- iframe {
- 	display: block;
- }
-
-
-
-
-.clickme {
+}
+#burger-btn {
 	display:none;
 }
- 
- .dropcontent {
+.dropcontent {
  	 position:relative;
- }
-/*droplist display/hide*/
+}
+article  {
+	background: rgb(249,221,169); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(249,221,169,1) 0%, rgba(255,251,245,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(249,221,169,1) 0%,rgba(255,251,245,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(249,221,169,1) 0%,rgba(255,251,245,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+article p {
+   margin: 1em;
+}
 
 
+/* media queries are all below. */
+/*i subscribed to the dimensions used in class exercises for the most part, as this seemed to work well for broad range of devices 
+with my styling*/
 
+/*for ease of use my background image media changes are declared in separate statements from the rest */
+@media (max-width: 900px) {
+	header:before{
+		background: url(img/tibet_background1_900x.png) no-repeat;
+		/*only this image is not my own (not photographed by me), the image here named tibet_background1_900x.png is from pixabay.com */
+	}
+}
+@media  (max-width: 480px) {
+	header:before{
+		background:url(img/background_480.png) no-repeat;
+	}
+}
+ @media (min-width:480px) and (max-width: 599px) {
+ 	header:before{
+	background: url(img/background_640.png) no-repeat;
+	}
+}
+
+/* mid-range tablet dimensions */
+
+@media (min-width: 480px) and (max-width: 767px) {
+	.col-1-2,.col-2, .col-4-3, .col-2-3, .col-rm-4-3 {
+		 width:44%;
+	}
+ 	ul {
+		display:block;
+	}
+	.col-1-4,
+	.col-3,
+	.col-4 {
+	}
+	nav ul li a {
+		box-shadow:initial;
+		border-radius: initial;
+	}
+	nav ul {
+		text-align:center;
+		display:block;
+	}
+	nav ul li {
+		margin-left:6%;
+	}
+	nav {
+		padding:.35em;
+	}
+}
+/*for larger phones and smaller tablets  */
+ @media (min-width:480px) and (max-width: 599px) {
+	.col-rm-4-3 {
+		width: 92%;
+	}
+	.col-2-3  {
+		width:44%;
+	}
+	.external .col-2-3 {
+		width:92%;
+		height: 5em;
+	}
+	.external .col-2-3 p {
+		padding: 0;
+		margin:0;
+	}
+	ul {
+		background:blue;
+		border: initial;
+		padding: 0;
+		display:inline-block;
+	}
+
+	ul:after{
+		content:"";
+		display:table;
+		clear:both;
+	}
+	li {
+		display:inline-block;
+		margin:0;
+	}
+	nav ul li a{
+		margin:0;
+		border: 1px solid black;
+	}
+	/*using technique learned in class to stack li on shrink screen using odd/even */
+	li:nth-of-type(odd){
+		float:left;
+		width:50%;
+		margin:0;
+	}
+	li:nth-of-type(even){
+		float:right;
+		width:50%;
+		margin:0;
+	}
+	li a:nth-of-type(odd) {
+		float:right;
+		width:100%;
+		margin:0;
+	}
+	li a:nth-of-type(even) {
+	    float:left;
+		width:100%;
+		margin:0;
+	}
+	header {
+		color:white; 
+		margin-right: 30em;
+		padding-top:0em;
+	}
+	header:before {
+		content : "";
+	    display: block;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	  	width: 100%;
+	    height: 100%;
+	    opacity : .8;
+	    z-index: -1;
+	    background-size:cover;
+	}
+	h1 {
+		margin-top: 0em;
+		margin-left:2em;
+		margin-bottom:1.4em;
+		color: white;
+	}
+}
+/* foro iphone and small phone screen dimensions.  all rows are follow columna at this screen size */
+@media (max-width: 479px) {
+	header {
+		height:  7.5em;
+	}
+
+	[class*="col-"] {
+		width:92%;
+		border-bottom:1px solid black;
+		margin-bottom: 1em;
+	}
+	/*height auto to shrink to content in mobile case */
+	.external .col-2-3 {
+		width:92%;
+		height: auto;
+		padding: .3em;
+	}
+	.external .col-2-3 p {
+		padding: 0;
+		margin:0;
+	}
+	.col-rm-4-3 {
+		width: 92%;
+	}
+ 	nav ul {
+		width: 44%;
+		float:left;
+	}
+	nav ul li {
+		margin-left:0;
+		margin-bottom:.75em;
+		background:purple;
+	}
+	nav ul li a {
+		border-radius:0px;
+	}
+	ul {
+ 		padding:0;
+ 	}
+	
+	/* keeps the iframe windows trancated, with allowable scrolling, so the page on desktop dimensions doesn't just go on for great height, and 
+	so can see  the footer within a reasonable spread */
+	.manageHeight{
+	 	position: relative;
+	 	border: 2px solid black;
+	 	padding: 1em;
+	 }
  
+	.external .col-6:nth-of-type(2) {
+		position: relative;
+		display:block;
+		margin-top: 5em;
+		top:5em;
+	}
+
+	 
+	/*at this screen dimension, I tun off the iframe display, and turn on the object display */
+	iframe {
+		display:none;
+	}
+	 
+	/* i used an object tag with px height only for the special case of windowing an external page within my page in frame1.html and frame2.html
+	only in the case where we are viewing at iphone screen dimensions, otherewise I use iframe.  
+	I was not able to keep the iframe restricted to screen width in all use cases on the iphone*/ 
+	object {
+		height:  10000px;
+		border: 0px;
+		margin: 0px;
+		padding: 0px;
+		max-width: 100%;    
+		display:block;
+	}
+
+	/* to follow is burger icon/menu code, various divs and classes and styling used to create the burger menu and to have javascript control 
+	over the functionality as I wanted  it to be */
+	
+	/*used css transition to ease dropdown display, technique from here.  http://stackoverflow.com/questions/3508605/how-can-i-transition-height-0-to-height-auto-using-css*/
+ 	/* had some difficulties with getting the display off/on to work using display:none, so researched and found out about transform scaleY
+ 	https://developer.mozilla.org/en-US/docs/Web/CSS/transform */
+ 	.dropcontent {
+		position:absolute;
+		margin-top:.5em;
+	    right:.04em;
+	    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	    z-index: 1;
+	    transform: scaleY(0); 
+	    transform-origin: top;
+	    transition: transform ease .3s;
+	    visibility:hidden;
+	}
+	/*this div class is just fixing some dimensions so that when the hamburger icon changes occur it does not push other elements */
+ 	.fixbuttonheight{
+ 		height:3em;
+ 		padding:0em;
+ 	}
+	#burger-btn {
+		position:absolute;
+		right:0;
+		display:block;
+		width:3em;
+		margin-right:1em;
+		background:inherit;
+		padding:.4em;
+		font-size: 16px;
+    	border: none;
+    	cursor: pointer;
+	}
+	#burger-btn:hover {
+		border:1px solid black;
+		background:aqua;
+	}
+	#burger-btn:focus {
+	   outline:1px solid black;
+	}
+	/*this use of outline with :focus gets rid of blue border on focus in chrome, which was bothering me, see at
+	http://stackoverflow.com/questions/20340138/remove-blue-border-from-css-custom-styled-button-in-chrome
+	*/
+	li {
+		width:7em;
+	}
+	nav {
+		padding-right:0;
+	}
+	/*top and obttom hamburger lines. idea from https://superdevresources.com/css-hamburger-menu/ */
+	.hamburger-lines{
+		border-top:3px solid black;
+		border-bottom:3px solid black;
+		position:relative;
+		height:2em;
+		display:block;
+		width:2em;
+	}
+	/*hamburger:before method technique for middle hamburger line from 
+	https://superdevresources.com/css-hamburger-menu/ */
+	 
+	.hamburger-lines:before {
+		content:"";
+		position:absolute;
+		width:100%;
+		left:0;
+		top: 45%;
+		border-top:3px solid black;
+	}
+	/*using transform rotate to make neat rotation of hamburger icon when clicked/opened */
+	#burger-btn.rotate {
+		transform: rotate(90deg);
+	}
+ 	button#burger-btn div {
+		background:black;
+		position:relative;
+		display:block;
+		height:5px;
+		width:65%;
+		margin:.4em;
+	}
+ 
+	#burger-btn:focus {
+		border:none;
+	}
+	#drop-area {
+		position:relative;
+		display:block;
+		float:right;
+	}
+	#ul {
+		position:relative;
+		display:inline-block;
+		width:100%;
+	}
+	.dropcontent a {
+		display:block;
+		color: black;
+	    padding: 12px 16px;
+	    text-decoration: none;
+	}
+	nav ul li a:hover  {
+		background:grey;
+		color:white;
+	}
+	nav ul li a:focus {
+		background:aqua;
+	}
+	nav ul li {
+	 	padding: 0em;
+		margin: 0;
+	}
+	nav ul li a {
+		padding:0;
+		border:1px solid black;
+	}
+ }
+
+/* class used in burger menu, added via javascript to displpay dropdown*/
+.show {
+	visibility:visible;
+	transform: scaleY(1);
+} 
